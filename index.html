@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Squid Sanctuary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            display: none;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li::before {
+            content: "→";
+            margin-right: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Squid Sanctuary</h1>
+    </header>
+    <nav>
+        <a href="#" onclick="showPage('home')">Home</a>
+        <a href="#" onclick="showPage('about')">About Me</a>
+        <a href="#" onclick="showPage('travel')">Travel</a>
+        <a href="#" onclick="showPage('work')">Work</a>
+    </nav>
+    <section id="home" style="display: block;">
+        <h2>Welcome to Squid Sanctuary!</h2>
+        <p>This is the home page. Click on the links above to explore more about me.</p>
+    </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Welcome to my sanctuary! I go by the name Blake and I'm a chess and coding addict.</p>
+    </section>
+    <section id="travel">
+        <h2>Travel</h2>
+        <p>My wanderlust has taken me to some amazing places:</p>
+        <ul>
+            <li>Finland</li>
+            <li>Estonia</li>
+            <li>Belgium</li>
+            <li>Italy</li>
+            <li>France</li>
+            <li>UK</li>
+        </ul>
+        <p>With luck, Japan will be my next destination!</p>
+    </section>
+    <section id="work">
+        <h2>What I'm Working On</h2>
+        <p>
+            Currently, I'm diving deep into data analysis and visualization at IHMC. 
+            Additionally, I'm exploring ethical hacking, building neural networks, and diving into website/app development. 
+            When I'm not doing that, you'll find me immersed in the world of chess.
+        </p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Squid Sanctuary. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            // Hide all sections
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Show the selected section
+            document.getElementById(pageId).style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
